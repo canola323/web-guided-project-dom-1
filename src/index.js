@@ -14,7 +14,6 @@ const imageFirstCard = firstCard.querySelector('img');
 const titleFirstCard = firstCard.querySelector('h2');
 const subtitleFirstCard = firstCard.querySelector('h3');
 const textFirstCard = firstCard.querySelector('p');
-console.log(textFirstCard);
 // firstCard.querySelector('.card-text');
 // C- traversing with dot notation
 const link1FirstCard = textFirstCard.nextElementSibling;
@@ -23,10 +22,27 @@ const link2FirstCard = link1FirstCard.nextElementSibling;
 
 // 👉 2- Finding collections of elements in the DOM
 // A- Find all the anchor tags inside the nav element
+const links = document.querySelectorAll('nav a');
+// NEVER USE VAR EVER EVER EVER EVER
 // B- Loop over the links and console.log their text content
+for(let i = 0; i < links.length; i++) {
+  console.log(links[i]);
+}
+links.forEach(function(link) {
+  console.log(link);
+})
+links.forEach(link => console.log(link));
 // C- Turn the collection of links into a real array
+const realLinks = Array.from(links);
 // D- Use .filter to find the anchor tag with the textContent of "Home"
-
+const homeLink = realLinks.find(link => link.textContent === 'Home');
+/**
+ * for(let i = 0; i < realLinks.length; i++) {
+ *   if (realLinks[i].textContent === 'Home') {
+ *     return realLinks[i];
+ *   }
+ * }
+ */
 
 // 👉 3- Changing an element's text content
 //  A- Change the cat-related content into dog-related content
