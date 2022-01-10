@@ -102,3 +102,9 @@ const contactHeading = document.querySelector('.contact-heading');
 const address = document.querySelector('.address');
 const phone = document.querySelector('.phone');
 const email = document.querySelector('.email');
+
+contactHeading.textContent = data["contact"]["contact-heading"];
+address.textContent = data["contact"]["address"];
+// HOW WOULD I UPDATE THE PHONE / EMAIL PORTION?!?!?
+phone.textContent = data["contact"]["phone"];
+email.textContent = data["contact"]["email"];
