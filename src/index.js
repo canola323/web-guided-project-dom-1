@@ -47,11 +47,18 @@ const homeLink = realLinks.find(link => link.textContent === 'Home');
 // 👉 3- Changing an element's text content
 //  A- Change the cat-related content into dog-related content
 //  B- Have the students research online the difference between textContent and innerText
-
+// innerHTML => change the actual HTML
+// p.innerHTML = '<a href="#">AHHHH</a>'
+logoTitle.textContent = 'BloomTech Dog';
+titleFirstCard.textContent = 'Dogs rule!';
+subtitleFirstCard.textContent = 'Cats are the worst!';
+textFirstCard.textContent = 'Lorem ipsum dolor sit amet';
+link2FirstCard.textContent = 'Dog Ipsum';
 
 // 👉 4- Changing any property
 //  A- Using dot notation to change a few attributes
 //  B- Using .setAttribute to change a few attributes
+link2FirstCard.setAttribute('href', 'https://doggoipsum.com');
 
 
 // 👉 5- Changing the styling of an element
