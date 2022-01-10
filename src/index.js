@@ -4,17 +4,21 @@
 //  Select the following single elements from the div.card
 
 // A- finding across the entire DOM
-const header = null
-const logoTitle = null
-const firstCard = null
+const header = document.querySelector('header');
+// const header = document.getElementsByTagName('header');
+const logoTitle = document.querySelector('#logoTitle');
+// const logoTitle = document.getElementById('logoTitle');
+const firstCard = document.querySelector('.card:nth-of-type(1)');
 // B- finding within one particular element
-const imageFirstCard = null
-const titleFirstCard = null
-const subtitleFirstCard = null
-const textFirstCard = null
+const imageFirstCard = firstCard.querySelector('img');
+const titleFirstCard = firstCard.querySelector('h2');
+const subtitleFirstCard = firstCard.querySelector('h3');
+const textFirstCard = firstCard.querySelector('p');
+console.log(textFirstCard);
+// firstCard.querySelector('.card-text');
 // C- traversing with dot notation
-const link1FirstCard = null
-const link2FirstCard = null
+const link1FirstCard = textFirstCard.nextElementSibling;
+const link2FirstCard = link1FirstCard.nextElementSibling;
 
 
 // 👉 2- Finding collections of elements in the DOM
